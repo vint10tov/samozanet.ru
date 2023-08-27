@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="samozanet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="samozanet" target="11" />
       <module name="start" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="samozanet" options="-parameters" />
       <module name="start" options="-parameters" />
     </option>
   </component>

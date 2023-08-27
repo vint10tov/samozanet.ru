@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/start/samozanet.iml" filepath="$PROJECT_DIR$/start/samozanet.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/samozanet.ru.iml" filepath="$PROJECT_DIR$/.idea/samozanet.ru.iml" />
     </modules>
   </component>
