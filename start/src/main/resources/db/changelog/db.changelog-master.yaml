@@ -1,0 +1,63 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 001
+      author: vint
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    autoIncrement: true
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: active
+                  type: bit
+              - column:
+                  name: date_of_created
+                  type: datetime(6)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: VARCHAR(255)
+              - column:
+                  name: lastname
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(1000)
+              - column:
+                  name: phonenumber
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+
+  - changeSet:
+      id: 002
+      author: vint
+      changes:
+        - createTable:
+            tableName: userrole
+            columns:
+              - column:
+                  name: userid
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: userid
+                    references: users(id)
+              - column:
+                  name: roles
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false

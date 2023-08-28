@@ -8,7 +8,9 @@ services:
     environment:
       MYSQL_DATABASE: samozanet
       MYSQL_ROOT_HOST: '%'
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: vint
+      MYSQL_PASSWORD: ~Q+~%o3Zj+o}R*H4+X-aVKb+
+      MYSQL_ROOT_PASSWORD: ~Q+~%o3Zj+o}R*H4+X-aVKb+
     ports:
       - "6033:3306"
     volumes:

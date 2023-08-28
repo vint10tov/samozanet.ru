@@ -22,7 +22,7 @@ public class UserEntity implements UserDetails {
     private Long id;
     @Column(name = "email", unique = true)
     private String email;
-    @Column(name = "phonenumber")
+    @Column(name = "phonenumber", unique = true)
     private String phoneNumber;
     @Column(name = "lastname")
     private String lastName;
