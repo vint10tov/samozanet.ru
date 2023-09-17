@@ -5,4 +5,5 @@ import ru.samozanet.entity.UserEntity;
 
 public interface UserEntityRepository extends JpaRepository<UserEntity, Long> {
     UserEntity findByEmail(String email);
+    UserEntity findByPhoneNumber(Long phoneNumber);
 }

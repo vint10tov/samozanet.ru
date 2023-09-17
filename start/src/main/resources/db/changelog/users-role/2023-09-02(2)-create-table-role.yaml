@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002
+      author: vint
+      changes:
+        - createTable:
+            tableName: userrole
+            columns:
+              - column:
+                  name: userid
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: userid
+                    references: users(id)
+              - column:
+                  name: roles
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false

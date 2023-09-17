@@ -6,5 +6,8 @@ switch(currentUrl){
     case "/registration/master":
         document.getElementById('block2').style.display = 'block';
         break;
+    case "/registration/admin":
+            document.getElementById('block3').style.display = 'block';
+            break;
     }
 document.getElementById("priceActivity").textContent = pageName;

@@ -23,7 +23,7 @@ public class UserEntity implements UserDetails {
     @Column(name = "email", unique = true)
     private String email;
     @Column(name = "phonenumber", unique = true)
-    private String phoneNumber;
+    private Long phoneNumber;
     @Column(name = "lastname")
     private String lastName;
     @Column(name = "firstname")
@@ -84,5 +84,17 @@ public class UserEntity implements UserDetails {
     @Override
     public boolean isEnabled() {
         return active;
+    }
+
+    public void setPhoneNumber(Long phonenumber) {
+        this.phoneNumber = phonenumber;
+    }
+
+    public void setLastName (String lastname) {
+        this.lastName = lastname;
+    }
+
+    public void setFirstName (String firstname) {
+        this.firstName = firstname;
     }
 }
